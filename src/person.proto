@@ -1,4 +1,5 @@
 syntax = "proto3";
+
 package simple.protobuf;
 
 /* This is the message for Person 
