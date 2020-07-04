@@ -3,22 +3,25 @@ package main
 import (
 	"fmt"
 
-	"github.com/tarakit/go-protobuf/src/person"
-
+	simplepb "github.com/protobuf-testing/src"
 )
 
-func main()  {
+func main() {
 	doSomething()
 }
 
+func doSomething() *simplepb.Person {
 
-func doSomething()  {
-	ps := simple.protobuf.person{
-		Name : "Kit Tara",
-		Age : 23,
-		Gender : "Male",
-		PhoneNumber : []int32{069320730, 099332232}
+	ps := simplepb.Person{
+		Name:        "Kit Tara",
+		Age:         23,
+		Gender:      "Male",
+		PhoneNumber: []string{"06, 23, 25", "02, 25, 45"},
 	}
 
 	fmt.Println(ps)
+	// ps.Name = "Toro Gaga"
+	// fmt.Println(ps)
+
+	return &ps
 }
