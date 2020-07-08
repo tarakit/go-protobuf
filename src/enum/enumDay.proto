@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package enum.protobuf;
+
+option go_package = "enumPb";
+
+message EnumDay{
+    int32 id = 1;
+    DayofTheWeek day_of_the_week = 2;
+}
+
+enum DayofTheWeek {
+    MONDAY = 0;
+    TUESDAY = 1;
+    WEDNESDAY = 2;
+    THURSDAY = 3;
+    FRIDAY = 4;
+    SATURDAY = 5;
+    SUNDAY = 6;
+}
